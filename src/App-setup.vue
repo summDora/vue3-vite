@@ -12,6 +12,7 @@
         所以在调用setup的时候，vue中的data和methods还没有初始化完成
         所以在setup函数中不可使用data和methods
         vue官方强制把setup函数中的this指向undefined
+        setup函数只能是同步的，不能是异步的
 */
 import {ref} from 'vue'
 export default {
