@@ -1,0 +1,69 @@
+<div>
+  <p> hello </p>
+  <p> hello </p>
+  <p :class='x'></p>
+  <p :style={background:yellow}></p>
+</div>
+<script>
+  /* ---------------------vue3.0新增静态变量------------------------- */
+  export function render(_ctx, _cache, $props, $setup, $data, $options) {
+    return (_openBlock(), _createBlock("div", null, [
+      _createVNode("p", null, " hello "),
+      _createVNode("p", null, " hello "),
+      _createVNode("p", { class: _ctx.x }, null, 2 /* CLASS */),
+      _createVNode("p", {
+        style: {background:_ctx.yellow}
+      }, null, 4 /* STYLE */)
+    ]))
+  }
+</script>
+
+
+<div>
+  <p> hello </p>
+  <p> hello </p>
+  <p> {{hello}} </p>
+</div>
+<script>
+/* ---------------静态提升之前 -----------------*/
+export function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (_openBlock(), _createBlock("div", null, [
+    _createVNode("p", null, " hello "),
+    _createVNode("p", null, " hello "),
+    _createVNode("p", null, _toDisplayString(_ctx.hello), 1 /* TEXT */)
+  ]))
+}
+/* ---------------静态提升之后 -----------------*/
+const _hoisted_1 = /*#__PURE__*/_createVNode("p", null, " hello ", -1 /* HOISTED */)
+const _hoisted_2 = /*#__PURE__*/_createVNode("p", null, " hello ", -1 /* HOISTED */)
+export function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (_openBlock(), _createBlock("div", null, [
+    _hoisted_1,
+    _hoisted_2,
+    _createVNode("p", null, _toDisplayString(_ctx.hello), 1 /* TEXT */)
+  ]))
+}
+</script>
+
+<div>
+  <button @click='handle'></button>
+</div>
+<script>
+  /* ---------------事件侦听器缓存之前 -----------------*/
+  export function render(_ctx, _cache, $props, $setup, $data, $options) {
+    return (_openBlock(), _createBlock("div", null, [
+      _createVNode("button", { onClick: _ctx.handle }, null, 8 /* PROPS */, ["onClick"])
+    ]))
+  }
+  /* 此时 createVNode的时候 有生成静态标记8 动态属性 */
+  /* ---------------事件侦听器缓存之后 -----------------*/
+  export function render(_ctx, _cache, $props, $setup, $data, $options) {
+    return (_openBlock(), _createBlock("div", null, [
+      _createVNode("button", {
+        onClick: _cache[1] || (_cache[1] = (...args) => (_ctx.handle(...args)))
+      })
+    ]))
+  }
+  /* 此时 静态标记 不存在了 就不会追踪了 */
+</script>
+
