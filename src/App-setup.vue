@@ -6,8 +6,13 @@
     <button @click="myFn2">myFn2</button>
 </div>
 </template>
-
 <script>
+/*
+-setup  是使用compositionAPI的入口，在生命周期beforeCreate之前被调用
+        所以在调用setup的时候，vue中的data和methods还没有初始化完成
+        所以在setup函数中不可使用data和methods
+        vue官方强制把setup函数中的this指向undefined
+*/
 import {ref} from 'vue'
 export default {
     name: 'App',
