@@ -2013,6 +2013,11 @@ vite@^1.0.0-rc.1:
     vue "^3.0.0-rc.10"
     ws "^7.3.1"
 
+vue-router@4.0.0-alpha.10:
+  version "4.0.0-alpha.10"
+  resolved "https://registry.npm.taobao.org/vue-router/download/vue-router-4.0.0-alpha.10.tgz#d27fc8c0713b6198f9c50af9b9e8be15f311f869"
+  integrity sha1-0n/IwHE7YZj5xQr5uei+FfMR+Gk=
+
 vue@^3.0.0-rc.1, vue@^3.0.0-rc.10:
   version "3.0.2"
   resolved "https://registry.npm.taobao.org/vue/download/vue-3.0.2.tgz#9d5b7b2983f35e64a34d13c7c9d6831239feca3c"
