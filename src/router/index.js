@@ -4,6 +4,7 @@ import AppReactive from '../App-reactive.vue'
 import AppRef from '../App-ref.vue'
 import AppSetup from '../App-setup.vue'
 import AppToraw from '../App-toRaw.vue'
+import AppMarkraw from '../App-markRaw.vue'
 const routes=[
     {
         path:'/',
@@ -25,9 +26,14 @@ const routes=[
         path:'/toraw',
         component:AppToraw
     },
+    {
+        path:'/markraw',
+        component:AppMarkraw
+    },
 ]
 const routerHistory=createWebHistory()
 const router=createRouter({
+    linkActiveClass:'route_active',
     history:routerHistory,
     routes
 })

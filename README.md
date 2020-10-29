@@ -32,6 +32,8 @@ router = new VueRouter({
 
 vue3.x: router = createRouter({
 
+    linkActiveClass:'route_active'
+
     history:createWebHistroy()
 
     routes:[
@@ -67,4 +69,6 @@ app.mount('#app')
 ## cnpm install sass-loader node-sass sass --save-dev
 
 ## yarn add sass-loader node-sass sass --dev
+
+#
 

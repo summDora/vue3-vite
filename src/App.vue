@@ -1,11 +1,13 @@
 <template>
     <div id="app">
+        <h1>VUE 3.0 新特性</h1>
         <div id='nav'>
             <router-link to='/'> AppCompositonAPI</router-link>
             <router-link to='/reactive'>AppReactive </router-link>
             <router-link to='/ref'> AppRef</router-link>
             <router-link to='/setup'> AppSetup</router-link>
             <router-link to='/toraw'> AppToraw</router-link>
+            <router-link to='/markraw'> AppMarkraw</router-link>
             <!-- <router-link to='/'> AppCompositonAPI</router-link> -->
         </div>
         <div class="line"></div>
@@ -29,19 +31,24 @@ export default {
 <style lang='scss'>
 $themeColor:#0a7a34;
     #nav{
-        width: 80vw;
+        width: 70vw;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         a{
             text-decoration: none;
             color:$themeColor;
-            padding:8px 0px;
+            padding:8px 15px;
+        }
+        .route_active{
+            background:$themeColor ;
+            color: white;
         }
     }
     .line{
         width: 100vw;
         height: 1px;
         border-top: 1px solid darken($themeColor,5%);
+        margin-bottom: 20px;
     }
 </style>
