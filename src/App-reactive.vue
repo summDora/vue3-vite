@@ -20,6 +20,14 @@
         +   默认情况下修改对象，log中的值会变，ui中的值不会更新
         +   如果想要ui中的对象同步更新，需要重新复制
 */
+/*
+    -   ref和reactive的区别：
+        +   在template中使用ref类型数据，vue会自动我们添加.value
+        +   在template中使用reactive类型数据，vue不会自动我们添加.value
+        +   vue在解析数据之前会自动判断这个数据是否属于ref类型
+        +   判断方式通过当前数据的私有属性__v_ref来判断
+        +   如果有这个私有属性且为true，那就代表这是一种ref类型数据
+*/
 import {reactive} from 'vue'
 export default {
     name: 'App',

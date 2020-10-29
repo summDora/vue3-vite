@@ -20,7 +20,7 @@
         +   默认情况下修改对象，log中的值会变，ui中的值不会更新
         +   如果想要ui中的对象同步更新，需要重新复制
 */
-import { reactive, } from 'vue'
+import { reactive,shallowRef,shallowReactive,triggerRef } from 'vue'
 export default {
     name: 'App',
     setup() {
