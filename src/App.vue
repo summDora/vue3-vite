@@ -17,9 +17,6 @@
 export default {
     name: 'App',
 }
-
-</script>
-<script>
 /*
     vue3.x 中如果要是用sass 除了install sass-loader , node-sass之外
     还需另外install sass
