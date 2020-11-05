@@ -1,0 +1,17 @@
+[
+    {
+        "id":"1","name":"tank"
+    },
+    {
+        "id":"2","name":"jungle"
+    },
+    {
+        "id":"3","name":"ap"
+    },
+    {
+        "id":"4","name":"ad"
+    },
+    {
+        "id":"5","name":"auxiliary"
+    }
+]
