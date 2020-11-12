@@ -6,6 +6,10 @@
     <ul>
         <li v-for="item in jsonList" :key="item.id">{{item.id}}---.____{{item.name}}</li>
     </ul>
+    <ul>
+        <li v-for="(item,index) in number" :key="index">{{item}}</li>
+    </ul>
+    <button @click="short">缩短</button>
 </div>
 </template>
 <script>
@@ -54,11 +58,25 @@ function jsonFetch(value){
     })
 }
 export default {
+    data() {
+        return {
+            number:[1,2,3,4,5,6]
+        }
+    },
+    methods: {
+        short(){
+            if(this.number.length<=3){
+                this.number.length++
+            }else{
+                this.number.length--
+            }
+        }
+    },
     setup(){
         let state=myRef(24)
         let jsonList=jsonFetch('../public/test.json')
         const change=()=>{
-            state.value++
+            state.value++;
         }
         return {state,change,jsonList}
     }

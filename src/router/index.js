@@ -7,6 +7,8 @@ import AppToraw from '../App-toRaw.vue'
 import AppMarkraw from '../App-markRaw.vue'
 import AppToref from '../App-toRef.vue'
 import AppCustomRef from '../App-customRef.vue'
+const AppRefgetdom = ()=>import("../App-ref-getDom.vue")
+const AppReadonly = ()=>import("../App-readonly.vue")
 const routes=[
     {
         path:'/',
@@ -39,6 +41,16 @@ const routes=[
     {
         path:'/customref',
         component:AppCustomRef
+    },
+    {
+        path:'/refgetdom',
+        component:AppRefgetdom
+    },
+    {
+        path:'/readonly',
+        component:AppReadonly
+        // component:resolve=>(require(['../App-readonly.vue'],resolve))
+      /*   component: resolve=>(require(["@/components/HelloWorld"],resolve)) */
     },
 ]
 const routerHistory=createWebHistory()
