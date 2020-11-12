@@ -66,9 +66,9 @@ app.mount('#app')
 
 # sass
 
-## cnpm install sass-loader node-sass sass --save-dev
+#### cnpm install sass-loader node-sass sass --save-dev
 
-## yarn add sass-loader node-sass sass --dev
+#### yarn add sass-loader node-sass sass --dev
 
 #
 
