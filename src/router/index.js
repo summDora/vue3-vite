@@ -8,7 +8,8 @@ import AppMarkraw from '../App-markRaw.vue'
 import AppToref from '../App-toRef.vue'
 import AppCustomRef from '../App-customRef.vue'
 const AppRefgetdom = ()=>import("../App-ref-getDom.vue")
-const AppReadonly = ()=>import("../App-readonly.vue")
+const AppReadonly = () => import("../App-readonly.vue")
+const EmitFather = () => import('../Emit-father.vue')
 const routes=[
     {
         path:'/',
@@ -45,6 +46,10 @@ const routes=[
     {
         path:'/refgetdom',
         component:AppRefgetdom
+    },
+    {
+        path:'/emitfather',
+        component:EmitFather
     },
     {
         path:'/readonly',

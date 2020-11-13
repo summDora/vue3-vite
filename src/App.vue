@@ -14,7 +14,7 @@
             <router-link to='/customref'> AppCustomRef</router-link>
             <router-link to='/refgetdom'> AppRefgetdom</router-link>
             <router-link to='/readonly'> AppReadonly</router-link>
-            <!-- <router-link to='/'> AppCompositonAPI</router-link> -->
+            <router-link to='/emitfather'> EmitFather</router-link>
             <!-- <router-link to='/'> AppCompositonAPI</router-link> -->
         </div>
         <div class="line"></div>
