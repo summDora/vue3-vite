@@ -16,8 +16,8 @@
 
 <script>
 import {reactive, ref} from 'vue'
-import userListRemove from './user/remuser'
-import userListAdd from './user/adduser'
+import userListRemove from './view/user/remuser'
+import userListAdd from './view/user/adduser'
 export default {
     name: 'App',
     setup() {
